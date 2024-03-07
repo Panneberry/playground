@@ -1,7 +1,7 @@
 # playground
 just for fun 
 
-# Note new thing I've learn
+# Note new things I've learn
 
 ## What is the "e" Character in JavaScript?
 In JavaScript, the "e" character is used in big numbers. For example, 1e3 means 1 with 3 zeroes after it, which is 1000!
