@@ -11,3 +11,14 @@ When we use a special function called **parseFloat**, it can understand the "e" 
 But if we use "e" in a strange way, like parseFloat("2.5e"), the function doesn't understand it and stops, giving us just 2.5.
 
 So, while we can type "e" into a number box, it might not always work as we expect! To make sure it behaves the way we want, we might need to be careful and check our numbers.
+
+## What is parseFloat
+`parseFloat` is a JavaScript function that parses a string argument and returns a floating point number. It is commonly used to convert a string containing numerical data into a floating point number. If the first character in the string cannot be converted to a number, `parseFloat` returns `NaN` (Not a Number). Here's a basic example:
+
+```javascript
+var numString = "3.14";
+var num = parseFloat(numString);
+console.log(num); // Output: 3.14
+```
+
+In this example, the string `"3.14"` is converted to the floating point number `3.14` using `parseFloat()`.
