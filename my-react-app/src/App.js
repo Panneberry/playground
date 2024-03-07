@@ -6,16 +6,20 @@ function Calculator() {
   const [result, setResult] = useState('');
 
   const handleNum1Change = (event) => {
-    setNum1(event.target.value);
+    const input = event.target.value;
+    setNum1(input);
+    calculateResult(input, num2);
   };
 
   const handleNum2Change = (event) => {
-    setNum2(event.target.value);
+    const input = event.target.value;
+    setNum2(input);
+    calculateResult(num1, input);
   };
 
-  const handleCalculate = () => {
-    const sum = parseFloat(num1) + parseFloat(num2);
-    setResult(sum);
+  const calculateResult = (val1, val2) => {
+    const sum = parseFloat(val1) + parseFloat(val2);
+    setResult(isNaN(sum) ? '' : sum);
   };
 
   return (
@@ -23,8 +27,7 @@ function Calculator() {
       <input type="number" value={num1} onChange={handleNum1Change} />
       <span> + </span>
       <input type="number" value={num2} onChange={handleNum2Change} />
-      <button onClick={handleCalculate}>=</button>
-      <span>{result}</span>
+      <span>= {result}</span>
     </div>
   );
 }
